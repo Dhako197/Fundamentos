@@ -1,3 +1,0 @@
-﻿1>------ Operación Compilar iniciada: proyecto: binario, configuración: Debug Any CPU ------
-1>  binario -> c:\users\estudiantes\source\repos\binario\binario\bin\Debug\binario.exe
-========== Compilar: 1 correctos, 0 incorrectos, 0 actualizados, 0 omitidos ==========
