@@ -4,34 +4,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp3
+namespace ConsoleApp1
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Ingrese IMC");
-            double imc = double.Parse(Console.ReadLine());
+            Console.WriteLine("Ingrese frase");
+            string frase = Console.ReadLine();
+            Console.WriteLine("Ingrese palabra a buscar");
+            string palabra = Console.ReadLine();
 
-            if (imc <= 18.5)
-            {
-                Console.WriteLine("Esta bajo de peso");
-            }
+            string fraseMayus = frase.ToUpper();
+            string palabraMayus = palabra.ToUpper();
+            int veces = 0;
+           
 
-            else if (18.5<= imc && imc <=24.9)
-            {
-                Console.WriteLine("Esta en un peso ideal");
-            }
 
-            else if (25.0<= imc && imc <=29.9)
+            for (int i=0; i<fraseMayus.Length - palabraMayus.Length+1; i++)
             {
-                Console.WriteLine("Esta en sobrepeso");
-            }
+                string palabraBuscada = "";
+                for (int j = 0; j < palabraMayus.Length; j++)
+                {
+                    palabraBuscada += fraseMayus[i+j];
+                    //Console.Write(palabraBuscada);                   
+                }
+                if (palabraBuscada == palabraMayus)
+                {
+                    Console.WriteLine("Palabra encontrada en: " + i );
+                    veces++;
+                }
 
-            else 
-            {
-                Console.WriteLine("Esta en obesidad");
+
             }
-        }                           
+            Console.WriteLine("Veces que se encontro: " + veces);
+            
+        }
     }
 }
