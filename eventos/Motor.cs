@@ -29,6 +29,7 @@ public class Motor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        cuerpo.WakeUp();
         Vector3 direccion = transform.forward;
         float sentido = Input.GetAxis("Vertical");
         Vector3 velocidad = magnitud * direccion * sentido;
